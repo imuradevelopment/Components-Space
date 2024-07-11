@@ -26,14 +26,9 @@
       padding: 1rem;
       background-color: #f9f9f9;
     }
-    .grid {
+    .button-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 0.5rem;
-    }
-    .button-grid {
-      display: flex;
-      flex-wrap: wrap;
       gap: 0.5rem;
     }
     .button-grid > * {
@@ -43,10 +38,8 @@
 <script defer src="bundle.js"></script></head>
 <body class="light-mode">
   <button id="toggle-mode">Toggle Mode</button>
-  <div id="root"></div>
-  <div id="app"></div>
-  <div id="wc-root" class="container">
-    <div class="component-section">
+  <div class="container">
+    <div class="component-section" id="wc-root">
       <h2>Web Components</h2>
       <div class="button-grid">
         <my-button label="Primary Small" size="small" color="#007bff"></my-button>
@@ -55,20 +48,27 @@
         <my-button label="Secondary Small" size="small" color="#6c757d"></my-button>
         <my-button label="Secondary Medium" size="medium" color="#6c757d"></my-button>
         <my-button label="Secondary Large" size="large" color="#6c757d"></my-button>
-        <!-- 他のカラーパレットとサイズも同様に追加 -->
+        <my-button label="Success Small" size="small" color="#28a745"></my-button>
+        <my-button label="Success Medium" size="medium" color="#28a745"></my-button>
+        <my-button label="Success Large" size="large" color="#28a745"></my-button>
+        <my-button label="Danger Small" size="small" color="#dc3545"></my-button>
+        <my-button label="Danger Medium" size="medium" color="#dc3545"></my-button>
+        <my-button label="Danger Large" size="large" color="#dc3545"></my-button>
+        <my-button label="Warning Small" size="small" color="#ffc107"></my-button>
+        <my-button label="Warning Medium" size="medium" color="#ffc107"></my-button>
+        <my-button label="Warning Large" size="large" color="#ffc107"></my-button>
+        <my-button label="Info Small" size="small" color="#17a2b8"></my-button>
+        <my-button label="Info Medium" size="medium" color="#17a2b8"></my-button>
+        <my-button label="Info Large" size="large" color="#17a2b8"></my-button>
       </div>
     </div>
-    <div class="component-section">
+    <div class="component-section" id="react-root">
       <h2>React Components</h2>
-      <div id="react-buttons" class="button-grid">
-        <!-- Reactのボタンはここに表示 -->
-      </div>
+      <div class="button-grid" id="react-buttons"></div>
     </div>
-    <div class="component-section">
+    <div class="component-section" id="vue-root">
       <h2>Vue Components</h2>
-      <div id="vue-buttons" class="button-grid">
-        <!-- Vueのボタンはここに表示 -->
-      </div>
+      <div class="button-grid" id="vue-buttons"></div>
     </div>
   </div>
   <script>
