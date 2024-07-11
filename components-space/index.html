@@ -13,15 +13,97 @@
       background-color: black;
       color: white;
     }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .component-section {
+      flex: 1 1 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+    }
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    button {
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+    .small {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+    .medium {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .large {
+      padding: 15px 30px;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body class="light-mode">
   <button id="toggle-mode">Toggle Mode</button>
-  <div id="root"></div>
-  <div id="app"></div>
-  <div id="wc-root">
-    <my-component></my-component>
-    <my-button>Click Me</my-button>
+  <div class="container">
+    <div class="component-section">
+      <h2>Web Components</h2>
+      <div class="flex-container" id="web-buttons">
+        <div class="button-group">
+          <my-button label="Primary S" size="small" color="#007bff"></my-button>
+          <my-button label="Primary M" size="medium" color="#007bff"></my-button>
+          <my-button label="Primary L" size="large" color="#007bff"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Secondary S" size="small" color="#6c757d"></my-button>
+          <my-button label="Secondary M" size="medium" color="#6c757d"></my-button>
+          <my-button label="Secondary L" size="large" color="#6c757d"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Success S" size="small" color="#28a745"></my-button>
+          <my-button label="Success M" size="medium" color="#28a745"></my-button>
+          <my-button label="Success L" size="large" color="#28a745"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Danger S" size="small" color="#dc3545"></my-button>
+          <my-button label="Danger M" size="medium" color="#dc3545"></my-button>
+          <my-button label="Danger L" size="large" color="#dc3545"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Warning S" size="small" color="#ffc107"></my-button>
+          <my-button label="Warning M" size="medium" color="#ffc107"></my-button>
+          <my-button label="Warning L" size="large" color="#ffc107"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Info S" size="small" color="#17a2b8"></my-button>
+          <my-button label="Info M" size="medium" color="#17a2b8"></my-button>
+          <my-button label="Info L" size="large" color="#17a2b8"></my-button>
+        </div>
+      </div>
+    </div>
+    <div class="component-section">
+      <h2>React Components</h2>
+      <div id="react-app"></div>
+    </div>
+    <div class="component-section">
+      <h2>Vue Components</h2>
+      <div id="vue-app"></div>
+    </div>
   </div>
   <script>
     document.getElementById('toggle-mode').addEventListener('click', () => {

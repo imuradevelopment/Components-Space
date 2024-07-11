@@ -33,10 +33,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './components-space/index.html',
     }),
-    new VueLoaderPlugin(), // ここに追加
+    new VueLoaderPlugin(),
   ],
   devServer: {
-    static: path.join(__dirname, 'public'),
+    static: path.join(__dirname, 'dist'),
     port: 3000,
   },
 };
