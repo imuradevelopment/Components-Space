@@ -13,21 +13,63 @@
       background-color: black;
       color: white;
     }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .component-section {
+      flex: 1 1 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.5rem;
+    }
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .button-grid > * {
+      flex: 1 1 100px;
+    }
   </style>
 <script defer src="bundle.js"></script></head>
 <body class="light-mode">
   <button id="toggle-mode">Toggle Mode</button>
   <div id="root"></div>
   <div id="app"></div>
-  <div id="wc-root">
-    <my-component></my-component>
-    <my-button label="Primary Small" size="small" color="#007bff"></my-button>
-    <my-button label="Primary Medium" size="medium" color="#007bff"></my-button>
-    <my-button label="Primary Large" size="large" color="#007bff"></my-button>
-    <my-button label="Secondary Small" size="small" color="#6c757d"></my-button>
-    <my-button label="Secondary Medium" size="medium" color="#6c757d"></my-button>
-    <my-button label="Secondary Large" size="large" color="#6c757d"></my-button>
-    <!-- 他のカラーパレットとサイズも同様に追加 -->
+  <div id="wc-root" class="container">
+    <div class="component-section">
+      <h2>Web Components</h2>
+      <div class="button-grid">
+        <my-button label="Primary Small" size="small" color="#007bff"></my-button>
+        <my-button label="Primary Medium" size="medium" color="#007bff"></my-button>
+        <my-button label="Primary Large" size="large" color="#007bff"></my-button>
+        <my-button label="Secondary Small" size="small" color="#6c757d"></my-button>
+        <my-button label="Secondary Medium" size="medium" color="#6c757d"></my-button>
+        <my-button label="Secondary Large" size="large" color="#6c757d"></my-button>
+        <!-- 他のカラーパレットとサイズも同様に追加 -->
+      </div>
+    </div>
+    <div class="component-section">
+      <h2>React Components</h2>
+      <div id="react-buttons" class="button-grid">
+        <!-- Reactのボタンはここに表示 -->
+      </div>
+    </div>
+    <div class="component-section">
+      <h2>Vue Components</h2>
+      <div id="vue-buttons" class="button-grid">
+        <!-- Vueのボタンはここに表示 -->
+      </div>
+    </div>
   </div>
   <script>
     document.getElementById('toggle-mode').addEventListener('click', () => {
