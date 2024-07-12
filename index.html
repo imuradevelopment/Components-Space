@@ -28,7 +28,12 @@
     }
     .flex-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
       gap: 0.5rem;
     }
     button {
@@ -36,7 +41,7 @@
       border-radius: 4px;
       cursor: pointer;
       color: #fff;
-      display: inline-block; /* デフォルトのdisplay属性 */
+      display: inline-block;
       box-sizing: border-box;
     }
     .small {
@@ -59,24 +64,36 @@
     <div class="component-section">
       <h2>Web Components</h2>
       <div class="flex-container" id="web-buttons">
-        <my-button label="Primary Small" size="small" color="#007bff"></my-button>
-        <my-button label="Primary Medium" size="medium" color="#007bff"></my-button>
-        <my-button label="Primary Large" size="large" color="#007bff"></my-button>
-        <my-button label="Secondary Small" size="small" color="#6c757d"></my-button>
-        <my-button label="Secondary Medium" size="medium" color="#6c757d"></my-button>
-        <my-button label="Secondary Large" size="large" color="#6c757d"></my-button>
-        <my-button label="Success Small" size="small" color="#28a745"></my-button>
-        <my-button label="Success Medium" size="medium" color="#28a745"></my-button>
-        <my-button label="Success Large" size="large" color="#28a745"></my-button>
-        <my-button label="Danger Small" size="small" color="#dc3545"></my-button>
-        <my-button label="Danger Medium" size="medium" color="#dc3545"></my-button>
-        <my-button label="Danger Large" size="large" color="#dc3545"></my-button>
-        <my-button label="Warning Small" size="small" color="#ffc107"></my-button>
-        <my-button label="Warning Medium" size="medium" color="#ffc107"></my-button>
-        <my-button label="Warning Large" size="large" color="#ffc107"></my-button>
-        <my-button label="Info Small" size="small" color="#17a2b8"></my-button>
-        <my-button label="Info Medium" size="medium" color="#17a2b8"></my-button>
-        <my-button label="Info Large" size="large" color="#17a2b8"></my-button>
+        <div class="button-group">
+          <my-button label="Primary Small" size="small" color="#007bff"></my-button>
+          <my-button label="Primary Medium" size="medium" color="#007bff"></my-button>
+          <my-button label="Primary Large" size="large" color="#007bff"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Secondary Small" size="small" color="#6c757d"></my-button>
+          <my-button label="Secondary Medium" size="medium" color="#6c757d"></my-button>
+          <my-button label="Secondary Large" size="large" color="#6c757d"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Success Small" size="small" color="#28a745"></my-button>
+          <my-button label="Success Medium" size="medium" color="#28a745"></my-button>
+          <my-button label="Success Large" size="large" color="#28a745"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Danger Small" size="small" color="#dc3545"></my-button>
+          <my-button label="Danger Medium" size="medium" color="#dc3545"></my-button>
+          <my-button label="Danger Large" size="large" color="#dc3545"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Warning Small" size="small" color="#ffc107"></my-button>
+          <my-button label="Warning Medium" size="medium" color="#ffc107"></my-button>
+          <my-button label="Warning Large" size="large" color="#ffc107"></my-button>
+        </div>
+        <div class="button-group">
+          <my-button label="Info Small" size="small" color="#17a2b8"></my-button>
+          <my-button label="Info Medium" size="medium" color="#17a2b8"></my-button>
+          <my-button label="Info Large" size="large" color="#17a2b8"></my-button>
+        </div>
       </div>
     </div>
     <div class="component-section">
