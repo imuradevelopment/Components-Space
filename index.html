@@ -26,13 +26,10 @@
       padding: 1rem;
       background-color: #f9f9f9;
     }
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
       gap: 0.5rem;
-    }
-    .button-grid > * {
-      flex: 1 1 100px;
     }
     button {
       border: none;
@@ -61,7 +58,7 @@
   <div class="container">
     <div class="component-section">
       <h2>Web Components</h2>
-      <div class="button-grid" id="web-buttons">
+      <div class="flex-container" id="web-buttons">
         <my-button label="Primary Small" size="small" color="#007bff"></my-button>
         <my-button label="Primary Medium" size="medium" color="#007bff"></my-button>
         <my-button label="Primary Large" size="large" color="#007bff"></my-button>
